@@ -1,0 +1,574 @@
+html,
+body,
+div {
+  height: 100%;
+}
+
+html {
+  font-size: 1vmin;
+  background: #000;
+}
+
+body {
+  margin: auto;
+  overflow: hidden;
+}
+
+div {
+  transform-style: preserve-3d;
+  perspective: 100em;
+  position: relative;
+}
+div *,
+div *:before,
+div *:after, div:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+div:after {
+  width: 50rem;
+  height: 50rem;
+  background: radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0), #000, rgba(0, 0, 0, 0.7));
+  transform: translate3d(0, 0, 40rem);
+  margin: auto;
+  bottom: 0;
+  right: 0;
+}
+
+moon {
+  margin: auto;
+  inset: 0;
+  width: 81rem;
+  height: 81rem;
+  background: #cccccc;
+  border-radius: 50%;
+  animation: wobble 2s linear infinite;
+}
+moon spin {
+  animation: r 10s linear infinite;
+  width: 80rem;
+  height: 0;
+  margin: auto;
+  inset: 0;
+}
+moon c {
+  width: 80rem;
+  height: 1rem;
+  z-index: 1;
+  font-size: 5rem;
+}
+moon c:before, moon c:after {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  transform: rotateY(-90deg);
+  background: rgba(0, 0, 0, 0.05);
+  animation: light 10s linear infinite;
+  opacity: 0.75;
+  border: 0.2rem dashed rgba(255, 255, 255, 0);
+}
+moon c:after {
+  background: #fff;
+}
+moon c:nth-of-type(1) {
+  transform: rotate(24deg) rotateY(10deg);
+}
+moon c:nth-of-type(1):before, moon c:nth-of-type(1):after {
+  animation-delay: -0.277s;
+}
+moon c:nth-of-type(1):before {
+  transform: rotateY(-90deg) scale(0.6);
+}
+moon c:nth-of-type(1):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.1);
+}
+moon c:nth-of-type(2) {
+  transform: rotate(41deg) rotateY(20deg);
+}
+moon c:nth-of-type(2):before, moon c:nth-of-type(2):after {
+  animation-delay: -0.554s;
+}
+moon c:nth-of-type(2):before {
+  transform: rotateY(-90deg) scale(0.1);
+}
+moon c:nth-of-type(2):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.5);
+}
+moon c:nth-of-type(3) {
+  transform: rotate(50deg) rotateY(30deg);
+}
+moon c:nth-of-type(3):before, moon c:nth-of-type(3):after {
+  animation-delay: -0.831s;
+}
+moon c:nth-of-type(3):before {
+  transform: rotateY(-90deg) scale(0.2);
+}
+moon c:nth-of-type(3):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.3);
+}
+moon c:nth-of-type(4) {
+  transform: rotate(43deg) rotateY(40deg);
+}
+moon c:nth-of-type(4):before, moon c:nth-of-type(4):after {
+  animation-delay: -1.108s;
+}
+moon c:nth-of-type(4):before {
+  transform: rotateY(-90deg) scale(0.8);
+}
+moon c:nth-of-type(4):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.8);
+}
+moon c:nth-of-type(5) {
+  transform: rotate(21deg) rotateY(50deg);
+}
+moon c:nth-of-type(5):before, moon c:nth-of-type(5):after {
+  animation-delay: -1.385s;
+}
+moon c:nth-of-type(5):before {
+  transform: rotateY(-90deg) scale(0.9);
+}
+moon c:nth-of-type(5):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(1);
+}
+moon c:nth-of-type(6) {
+  transform: rotate(18deg) rotateY(60deg);
+}
+moon c:nth-of-type(6):before, moon c:nth-of-type(6):after {
+  animation-delay: -1.662s;
+}
+moon c:nth-of-type(6):before {
+  transform: rotateY(-90deg) scale(1);
+}
+moon c:nth-of-type(6):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.9);
+}
+moon c:nth-of-type(7) {
+  transform: rotate(49deg) rotateY(70deg);
+}
+moon c:nth-of-type(7):before, moon c:nth-of-type(7):after {
+  animation-delay: -1.939s;
+}
+moon c:nth-of-type(7):before {
+  transform: rotateY(-90deg) scale(0.3);
+}
+moon c:nth-of-type(7):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(1);
+}
+moon c:nth-of-type(8) {
+  transform: rotate(8deg) rotateY(80deg);
+}
+moon c:nth-of-type(8):before, moon c:nth-of-type(8):after {
+  animation-delay: -2.216s;
+}
+moon c:nth-of-type(8):before {
+  transform: rotateY(-90deg) scale(1);
+}
+moon c:nth-of-type(8):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.2);
+}
+moon c:nth-of-type(9) {
+  transform: rotate(18deg) rotateY(90deg);
+}
+moon c:nth-of-type(9):before, moon c:nth-of-type(9):after {
+  animation-delay: -2.493s;
+}
+moon c:nth-of-type(9):before {
+  transform: rotateY(-90deg) scale(0.2);
+}
+moon c:nth-of-type(9):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.5);
+}
+moon c:nth-of-type(10) {
+  transform: rotate(26deg) rotateY(100deg);
+}
+moon c:nth-of-type(10):before, moon c:nth-of-type(10):after {
+  animation-delay: -2.77s;
+}
+moon c:nth-of-type(10):before {
+  transform: rotateY(-90deg) scale(0.7);
+}
+moon c:nth-of-type(10):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.8);
+}
+moon c:nth-of-type(11) {
+  transform: rotate(15deg) rotateY(110deg);
+}
+moon c:nth-of-type(11):before, moon c:nth-of-type(11):after {
+  animation-delay: -3.047s;
+}
+moon c:nth-of-type(11):before {
+  transform: rotateY(-90deg) scale(0.9);
+}
+moon c:nth-of-type(11):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.5);
+}
+moon c:nth-of-type(12) {
+  transform: rotate(58deg) rotateY(120deg);
+}
+moon c:nth-of-type(12):before, moon c:nth-of-type(12):after {
+  animation-delay: -3.324s;
+}
+moon c:nth-of-type(12):before {
+  transform: rotateY(-90deg) scale(0.6);
+}
+moon c:nth-of-type(12):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(1);
+}
+moon c:nth-of-type(13) {
+  transform: rotate(15deg) rotateY(130deg);
+}
+moon c:nth-of-type(13):before, moon c:nth-of-type(13):after {
+  animation-delay: -3.601s;
+}
+moon c:nth-of-type(13):before {
+  transform: rotateY(-90deg) scale(0.9);
+}
+moon c:nth-of-type(13):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.2);
+}
+moon c:nth-of-type(14) {
+  transform: rotate(43deg) rotateY(140deg);
+}
+moon c:nth-of-type(14):before, moon c:nth-of-type(14):after {
+  animation-delay: -3.878s;
+}
+moon c:nth-of-type(14):before {
+  transform: rotateY(-90deg) scale(0.5);
+}
+moon c:nth-of-type(14):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.1);
+}
+moon c:nth-of-type(15) {
+  transform: rotate(9deg) rotateY(150deg);
+}
+moon c:nth-of-type(15):before, moon c:nth-of-type(15):after {
+  animation-delay: -4.155s;
+}
+moon c:nth-of-type(15):before {
+  transform: rotateY(-90deg) scale(0.7);
+}
+moon c:nth-of-type(15):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.6);
+}
+moon c:nth-of-type(16) {
+  transform: rotate(57deg) rotateY(160deg);
+}
+moon c:nth-of-type(16):before, moon c:nth-of-type(16):after {
+  animation-delay: -4.432s;
+}
+moon c:nth-of-type(16):before {
+  transform: rotateY(-90deg) scale(0.8);
+}
+moon c:nth-of-type(16):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.4);
+}
+moon c:nth-of-type(17) {
+  transform: rotate(39deg) rotateY(170deg);
+}
+moon c:nth-of-type(17):before, moon c:nth-of-type(17):after {
+  animation-delay: -4.709s;
+}
+moon c:nth-of-type(17):before {
+  transform: rotateY(-90deg) scale(0.4);
+}
+moon c:nth-of-type(17):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.6);
+}
+moon c:nth-of-type(18) {
+  transform: rotate(38deg) rotateY(180deg);
+}
+moon c:nth-of-type(18):before, moon c:nth-of-type(18):after {
+  animation-delay: -4.986s;
+}
+moon c:nth-of-type(18):before {
+  transform: rotateY(-90deg) scale(0.7);
+}
+moon c:nth-of-type(18):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.5);
+}
+moon c:nth-of-type(19) {
+  transform: rotate(43deg) rotateY(190deg);
+}
+moon c:nth-of-type(19):before, moon c:nth-of-type(19):after {
+  animation-delay: -5.263s;
+}
+moon c:nth-of-type(19):before {
+  transform: rotateY(-90deg) scale(0.1);
+}
+moon c:nth-of-type(19):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.3);
+}
+moon c:nth-of-type(20) {
+  transform: rotate(49deg) rotateY(200deg);
+}
+moon c:nth-of-type(20):before, moon c:nth-of-type(20):after {
+  animation-delay: -5.54s;
+}
+moon c:nth-of-type(20):before {
+  transform: rotateY(-90deg) scale(0.4);
+}
+moon c:nth-of-type(20):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.5);
+}
+moon c:nth-of-type(21) {
+  transform: rotate(40deg) rotateY(210deg);
+}
+moon c:nth-of-type(21):before, moon c:nth-of-type(21):after {
+  animation-delay: -5.817s;
+}
+moon c:nth-of-type(21):before {
+  transform: rotateY(-90deg) scale(0.1);
+}
+moon c:nth-of-type(21):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.7);
+}
+moon c:nth-of-type(22) {
+  transform: rotate(36deg) rotateY(220deg);
+}
+moon c:nth-of-type(22):before, moon c:nth-of-type(22):after {
+  animation-delay: -6.094s;
+}
+moon c:nth-of-type(22):before {
+  transform: rotateY(-90deg) scale(0.7);
+}
+moon c:nth-of-type(22):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.6);
+}
+moon c:nth-of-type(23) {
+  transform: rotate(11deg) rotateY(230deg);
+}
+moon c:nth-of-type(23):before, moon c:nth-of-type(23):after {
+  animation-delay: -6.371s;
+}
+moon c:nth-of-type(23):before {
+  transform: rotateY(-90deg) scale(0.6);
+}
+moon c:nth-of-type(23):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.9);
+}
+moon c:nth-of-type(24) {
+  transform: rotate(2deg) rotateY(240deg);
+}
+moon c:nth-of-type(24):before, moon c:nth-of-type(24):after {
+  animation-delay: -6.648s;
+}
+moon c:nth-of-type(24):before {
+  transform: rotateY(-90deg) scale(0.1);
+}
+moon c:nth-of-type(24):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.5);
+}
+moon c:nth-of-type(25) {
+  transform: rotate(59deg) rotateY(250deg);
+}
+moon c:nth-of-type(25):before, moon c:nth-of-type(25):after {
+  animation-delay: -6.925s;
+}
+moon c:nth-of-type(25):before {
+  transform: rotateY(-90deg) scale(0.9);
+}
+moon c:nth-of-type(25):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.6);
+}
+moon c:nth-of-type(26) {
+  transform: rotate(16deg) rotateY(260deg);
+}
+moon c:nth-of-type(26):before, moon c:nth-of-type(26):after {
+  animation-delay: -7.202s;
+}
+moon c:nth-of-type(26):before {
+  transform: rotateY(-90deg) scale(0.4);
+}
+moon c:nth-of-type(26):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.6);
+}
+moon c:nth-of-type(27) {
+  transform: rotate(19deg) rotateY(270deg);
+}
+moon c:nth-of-type(27):before, moon c:nth-of-type(27):after {
+  animation-delay: -7.479s;
+}
+moon c:nth-of-type(27):before {
+  transform: rotateY(-90deg) scale(0.6);
+}
+moon c:nth-of-type(27):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.9);
+}
+moon c:nth-of-type(28) {
+  transform: rotate(9deg) rotateY(280deg);
+}
+moon c:nth-of-type(28):before, moon c:nth-of-type(28):after {
+  animation-delay: -7.756s;
+}
+moon c:nth-of-type(28):before {
+  transform: rotateY(-90deg) scale(0.9);
+}
+moon c:nth-of-type(28):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.6);
+}
+moon c:nth-of-type(29) {
+  transform: rotate(11deg) rotateY(290deg);
+}
+moon c:nth-of-type(29):before, moon c:nth-of-type(29):after {
+  animation-delay: -8.033s;
+}
+moon c:nth-of-type(29):before {
+  transform: rotateY(-90deg) scale(0.3);
+}
+moon c:nth-of-type(29):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.4);
+}
+moon c:nth-of-type(30) {
+  transform: rotate(16deg) rotateY(300deg);
+}
+moon c:nth-of-type(30):before, moon c:nth-of-type(30):after {
+  animation-delay: -8.31s;
+}
+moon c:nth-of-type(30):before {
+  transform: rotateY(-90deg) scale(0.3);
+}
+moon c:nth-of-type(30):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.7);
+}
+moon c:nth-of-type(31) {
+  transform: rotate(28deg) rotateY(310deg);
+}
+moon c:nth-of-type(31):before, moon c:nth-of-type(31):after {
+  animation-delay: -8.587s;
+}
+moon c:nth-of-type(31):before {
+  transform: rotateY(-90deg) scale(0.7);
+}
+moon c:nth-of-type(31):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.8);
+}
+moon c:nth-of-type(32) {
+  transform: rotate(40deg) rotateY(320deg);
+}
+moon c:nth-of-type(32):before, moon c:nth-of-type(32):after {
+  animation-delay: -8.864s;
+}
+moon c:nth-of-type(32):before {
+  transform: rotateY(-90deg) scale(1);
+}
+moon c:nth-of-type(32):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.8);
+}
+moon c:nth-of-type(33) {
+  transform: rotate(44deg) rotateY(330deg);
+}
+moon c:nth-of-type(33):before, moon c:nth-of-type(33):after {
+  animation-delay: -9.141s;
+}
+moon c:nth-of-type(33):before {
+  transform: rotateY(-90deg) scale(0.7);
+}
+moon c:nth-of-type(33):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.5);
+}
+moon c:nth-of-type(34) {
+  transform: rotate(33deg) rotateY(340deg);
+}
+moon c:nth-of-type(34):before, moon c:nth-of-type(34):after {
+  animation-delay: -9.418s;
+}
+moon c:nth-of-type(34):before {
+  transform: rotateY(-90deg) scale(0.7);
+}
+moon c:nth-of-type(34):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.6);
+}
+moon c:nth-of-type(35) {
+  transform: rotate(35deg) rotateY(350deg);
+}
+moon c:nth-of-type(35):before, moon c:nth-of-type(35):after {
+  animation-delay: -9.695s;
+}
+moon c:nth-of-type(35):before {
+  transform: rotateY(-90deg) scale(0.4);
+}
+moon c:nth-of-type(35):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.3);
+}
+moon c:nth-of-type(36) {
+  transform: rotate(12deg) rotateY(360deg);
+}
+moon c:nth-of-type(36):before, moon c:nth-of-type(36):after {
+  animation-delay: -9.972s;
+}
+moon c:nth-of-type(36):before {
+  transform: rotateY(-90deg) scale(0.2);
+}
+moon c:nth-of-type(36):after {
+  transform: translate3d(-75rem, 0, 0) rotateY(90deg) scale(0.7);
+}
+@keyframes r {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes wobble {
+  20% {
+    transform: translate3d(0.25rem, 0, 0);
+  }
+  70% {
+    transform: translate3d(-0.25rem, 0, 0);
+  }
+}
+@keyframes light {
+  40% {
+    box-shadow: 3rem 1rem #000, inset 3rem 1rem #000;
+  }
+  10% {
+    box-shadow: -2rem 0.5rem #000, inset -2rem 0.5rem #000;
+  }
+  25% {
+    box-shadow: 0.5rem 0.5rem #000, inset 0.5rem 0.5rem #000;
+  }
+}
+
+.sig {
+  position: absolute;
+  left: auto;
+  right: 1rem;
+  top: 1rem;
+  font-size: 0.5rem;
+  color: #fff;
+  width: 10em;
+  transform: skewX(10deg) scaleY(0.45) rotate(2deg);
+  mix-blend-mode: difference;
+}
+.sig,
+.sig * {
+  height: 9.25em;
+  overflow: hidden;
+  border-radius: 0.5em;
+}
+.sig:before,
+.sig *:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5em;
+  height: 5em;
+  background: currentColor;
+  transform: translate3d(-2.5em, 0, 0) rotate(-45deg);
+  box-shadow: -3em 3em 0 0 currentColor;
+  border-radius: 0.5em 2em 0.5em 2em;
+}
+.sig * {
+  width: 5em;
+  transform: translate3d(3.75em, 0, 0) scaleY(0.95);
+  display: block !important;
+}
+.sig *:before {
+  transform: translate3d(-3em, -2em, 0) rotate(-45deg);
+  box-shadow: -3em 3em 0 0 currentColor, -6em 6em 0 0 currentColor;
+  border-radius: 0.5em;
+}
